@@ -1,4 +1,4 @@
-local LUI = require("LUI")
+local LUI = require("LUI.init")
 local benchmark = require("benchmarker")
 table.tostring = require("LUI.table_tostring")
 printval = function(...)

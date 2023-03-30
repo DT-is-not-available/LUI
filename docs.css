@@ -1,0 +1,42 @@
+progress {
+	-webkit-appearance: none;
+	appearance: none;
+	position: relative;
+	height: 1.5em;
+	width: 100px;
+}
+progress[fill] {
+	width: 100%;
+	display: block;
+}
+progress::-webkit-progress-bar {
+	background: #444;
+	border: 1px solid #777;
+	border-radius: 5px;
+}
+progress[value]::before {
+	content: attr(value)"/"attr(max);
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	text-align: center;
+	line-height: 1.5em;
+	text-shadow: #000 0px 0 5px;
+}
+progress[value][max="100"]::before {
+	content: attr(value)"%";
+}
+progress::-webkit-progress-value {
+	background: linear-gradient(rgb(57, 241, 57), #0a0);
+	border-radius: 4px;
+}
+progress[red]::-webkit-progress-value {
+	background: linear-gradient(#f33, #a00);
+	border-radius: 4px;
+}
+progress[yellow]::-webkit-progress-value {
+	background: linear-gradient(rgb(255, 213, 0), #a80);
+	border-radius: 4px;
+}
